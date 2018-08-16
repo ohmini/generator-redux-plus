@@ -60,6 +60,22 @@ module.exports = class App extends Generator {
       this.templatePath('.flowconfig'),
       this.destinationPath('.flowconfig')
     )
+
+    this.fs.copy(
+      this.templatePath('flow-typed/common.js')
+      this.destinationPath('flow-typed/common.js')
+    )
+
+    this.fs.copy(
+      this.templatePath('flow-typed/router.js')
+      this.destinationPath('flow-typed/router.js')
+    )
+
+    this.fs.copy(
+      this.templatePath('flow-typed/state.js')
+      this.destinationPath('flow-typed/state.js')
+    )
+
   }
 
 }
