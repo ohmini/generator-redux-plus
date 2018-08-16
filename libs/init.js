@@ -44,4 +44,19 @@ module.exports = function init(generator) {
     generator.meta
   )
 
+  generator.fs.copy(
+    templatePath('init/flow-typed/common.js'),
+    generator.destinationPath('flow-typed/common.js')
+  )
+
+  generator.fs.copy(
+    templatePath('init/flow-typed/router.js'),
+    generator.destinationPath('flow-typed/router.js')
+  )
+
+  generator.fs.copy(
+    templatePath('init/flow-typed/state.js'),
+    generator.destinationPath('flow-typed/state.js')
+  )
+
 }
