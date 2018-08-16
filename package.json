@@ -1,5 +1,5 @@
 {
-  "name": "@tanawat/generator-redux-plus",
+  "name": "@ratthasorn/generator-redux-plus",
   "version": "1.0.1",
   "description": "Yeoman generator for Redux-based project plus Redux-saga and Router5",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codewithcats/generator-redux-plus.git"
+    "url": "git+https://github.com/ohmini/generator-redux-plus.git"
   },
   "keywords": [
     "yeoman-generator",
@@ -17,12 +17,8 @@
     "router5",
     "javascript"
   ],
-  "author": "Tanawat Tassana <amp.tanawat@gmail.com>",
+  "author": "Ratthasorn Thassana <ratthasorn.thassana@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codewithcats/generator-redux-plus/issues"
-  },
-  "homepage": "https://github.com/codewithcats/generator-redux-plus#readme",
   "dependencies": {
     "lodash": "^4.17.10",
     "yeoman-generator": "^3.0.0"
