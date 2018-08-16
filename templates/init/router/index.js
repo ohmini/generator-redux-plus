@@ -1,6 +1,5 @@
 import createRouter from 'router5'
 import browserPlugin from 'router5/plugins/browser'
-import listenersPlugin from 'router5/plugins/listeners'
 
 export type Route = {
   name: string,
@@ -27,7 +26,6 @@ const options = {
 }
 
 export const router = createRouter(routes, options)
-.usePlugin(listenersPlugin())
 .usePlugin(browserPlugin({
-  useHash: true
+  useHash: false, 
 }))
