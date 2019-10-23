@@ -1,13 +1,10 @@
 // @flow
 
-import type {ApplicationState} from '../../types'
-import type {<%= state.flowType %>} from '../types'
-
-export function <%= selector %>(appState: ApplicationState): ApplicationState {
+export function <%= selector %>(appState) {
   return appState
 }
 
-function _<%= selector %>(state: <%= state.flowType %>): <%= state.flowType %> {
+function _<%= selector %>(state) {
   return state
 }
 

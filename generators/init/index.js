@@ -18,9 +18,6 @@ module.exports = class Init extends Generator {
       this.yarnInstall(
         ['redux', 'redux-saga', 'router5', 'redux-router5']
       )
-      this.yarnInstall(
-        ['flow-bin'], {dev: true}
-      )
     }
   }
 

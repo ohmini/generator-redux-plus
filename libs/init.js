@@ -19,11 +19,6 @@ module.exports = function init(generator) {
     generator.destinationPath('src/state/initialState.js')
   )
 
-  generator.fs.copy(
-    templatePath('init/.flowconfig'),
-    generator.destinationPath('.flowconfig')
-  )
-
   generator.fs.copyTpl(
     templatePath('init/router/index.js'),
     generator.destinationPath('src/router/index.js'),
@@ -31,32 +26,9 @@ module.exports = function init(generator) {
   )
 
   generator.fs.copyTpl(
-    templatePath('global.types.ejs'),
-    generator.destinationPath(`src/state/types.js`),
-    {
-      ...generator.meta,
-    }
-  )
-
-  generator.fs.copyTpl(
     templatePath('store.ejs'),
     generator.destinationPath('src/state/store.js'),
     generator.meta
-  )
-
-  generator.fs.copy(
-    templatePath('init/flow-typed/common.js'),
-    generator.destinationPath('flow-typed/common.js')
-  )
-
-  generator.fs.copy(
-    templatePath('init/flow-typed/router.js'),
-    generator.destinationPath('flow-typed/router.js')
-  )
-
-  generator.fs.copy(
-    templatePath('init/flow-typed/state.js'),
-    generator.destinationPath('flow-typed/state.js')
   )
 
 }

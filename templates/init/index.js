@@ -17,9 +17,6 @@ module.exports = class App extends Generator {
       this.yarnInstall(
         ['redux', 'redux-saga', 'router5', 'redux-router5']
       )
-      this.yarnInstall(
-        ['flow-bin'], {dev: true}
-      )
     }
   }
 
@@ -54,26 +51,6 @@ module.exports = class App extends Generator {
       this.templatePath('router/index.js'),
       this.destinationPath('src/router/index.js'),
       {}
-    )
-
-    this.fs.copy(
-      this.templatePath('.flowconfig'),
-      this.destinationPath('.flowconfig')
-    )
-
-    this.fs.copy(
-      this.templatePath('flow-typed/common.js')
-      this.destinationPath('flow-typed/common.js')
-    )
-
-    this.fs.copy(
-      this.templatePath('flow-typed/router.js')
-      this.destinationPath('flow-typed/router.js')
-    )
-
-    this.fs.copy(
-      this.templatePath('flow-typed/state.js')
-      this.destinationPath('flow-typed/state.js')
     )
 
   }
