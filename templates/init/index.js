@@ -36,12 +36,6 @@ module.exports = class App extends Generator {
     )
 
     this.fs.copyTpl(
-      this.templatePath('../../../templates/stateTypes.ejs'),
-      this.destinationPath(`src/state/common.type.js`),
-      meta
-    )
-
-    this.fs.copyTpl(
       this.templatePath('../../../templates/store.ejs'),
       this.destinationPath('src/state/store.js'),
       meta

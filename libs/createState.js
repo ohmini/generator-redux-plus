@@ -2,7 +2,6 @@ const _ = require('lodash')
 const templatePath = require('./templatePath')
 
 module.exports = function(generator, stateName) {
-    const stateType = `${_.capitalize(_.camelCase(stateName))}State`
 
     if (generator.meta.states[stateName]) {
       this.log(`State [${stateName}] already been created. Aborted.`)
@@ -11,7 +10,6 @@ module.exports = function(generator, stateName) {
 
     _.set(generator.meta, `states.${stateName}`, {
       name: stateName,
-      flowType: stateType,
       actions: {},
       channels: {},
       effects: {},
@@ -63,20 +61,6 @@ module.exports = function(generator, stateName) {
         state,
         actions: [],
       }
-    )
-
-    generator.fs.copyTpl(
-      templatePath('local.types.ejs'),
-      generator.destinationPath(`src/state/${stateName}/types.js`),
-      {
-        state,
-      }
-    )
-
-    generator.fs.copyTpl(
-      templatePath('global.types.ejs'),
-      generator.destinationPath(`src/state/types.js`),
-      generator.meta,
     )
 
     generator.fs.copyTpl(

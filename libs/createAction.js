@@ -4,7 +4,6 @@ const templatePath = require('./templatePath')
 module.exports = function(generator, stateName, actionName) {
   _.set(generator.meta, `states.${stateName}.actions.${actionName}`, {
     name: actionName,
-    flowType: _.upperFirst(actionName),
     id: `${stateName}/${_.toUpper(_.snakeCase(actionName))}`,
   })
   generator.updateMeta()
